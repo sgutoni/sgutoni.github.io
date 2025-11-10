@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Categories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 900px;
+    }
+
+    .card {
+      flex: 1;
+      color: #fff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sedans {
+      background-color: hsl(31, 77%, 52%);
+    }
+
+    .suvs {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .luxury {
+      background-color: hsl(179, 100%, 13%);
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background: #fff;
+      border: none;
+      color: inherit;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      align-self: flex-start;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .sedans .btn {
+      color: hsl(31, 77%, 52%);
+    }
+
+    .suvs .btn {
+      color: hsl(184, 100%, 22%);
+    }
+
+    .luxury .btn {
+      color: hsl(179, 100%, 13%);
+    }
+
+    .btn:hover {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        margin: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card sedans">
+      <div>
+        <img src="icon-sedans.svg" alt="Sedan Icon" width="50" style="margin-bottom:20px; opacity:0.8;">
+        <h2>SEDANS</h2>
+        <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+      </div>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <div class="card suvs">
+      <div>
+        <img src="icon-suvs.svg" alt="SUV Icon" width="50" style="margin-bottom:20px; opacity:0.8;">
+        <h2>SUVS</h2>
+        <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+      </div>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <div class="card luxury">
+      <div>
+        <img src="icon-luxury.svg" alt="Luxury Car Icon" width="50" style="margin-bottom:20px; opacity:0.8;">
+        <h2>LUXURY</h2>
+        <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+      </div>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </div>
+</body>
+</html>
