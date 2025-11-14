@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Menú de Lenguaje de marcas</title>
     <style>
-        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -37,6 +36,11 @@
             list-style: none;
             display: flex;
             gap: 1.5rem;
+            position: relative;
+        }
+
+        .menu li {
+            position: relative;
         }
 
         .menu a {
@@ -46,6 +50,7 @@
             padding: 0.3rem 0.6rem;
             border-radius: 5px;
             transition: background-color 0.3s ease, color 0.3s ease;
+            display: block;
         }
 
         .menu a:hover {
@@ -56,6 +61,38 @@
         .menu a.active {
             background-color: #ffb703;
             color: #102a43;
+        }
+        .submenu {
+            display: block;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #334e68;
+            padding: 0.5rem;
+            border-radius: 6px;
+            list-style: none;
+            min-width: 140px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+            /* Animación */
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .submenu li {
+            margin-bottom: 0.4rem;
+        }
+
+        .submenu li:last-child {
+            margin-bottom: 0;
+        }
+
+        .menu li:hover .submenu {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
         }
 
         main {
@@ -90,7 +127,6 @@
         }
 
         /* Responsive */
-
         @media (max-width: 600px) {
             .menu ul {
                 flex-direction: column;
@@ -108,14 +144,19 @@
         <h1>Lenguaje de marcas: Ejercicios</h1>
         <nav class="menu">
             <ul>
-                <li><a href="menu.html" class="active">Menú Principal</a></li>
                 <li><a href="Restaurante/index.html">Restaurante con CSS</a></li>
                 <li><a href="Horario.html">Horario</a></li>
-                <li><a href="Reto 1/index.html">Reto 1</a></li>
-                <li><a href="Reto 2/index.html">Reto 2</a></li>
+                <li>
+                    <a href="#">Retos</a>
+                    <ul class="submenu">
+                        <li><a href="Reto 1/index.html">Reto 1</a></li>
+                        <li><a href="Reto 2/index.html">Reto 2</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="welcome">
             <h2> Bienvenido al menú de los ejercicios</h2>
@@ -123,4 +164,4 @@
         </section>
     </main>
 </body>
-
+</html>
