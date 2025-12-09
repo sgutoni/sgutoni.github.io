@@ -60,6 +60,48 @@
         a:hover {
             background-color: var(--color-boton-hover);
         }
+        footer {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid var(--color-principal);
+    padding-top: 20px;
+}
+
+.boton-resena {
+    background-color: var(--color-boton);
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boton-resena:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cerrar {
+    background-color: #888;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.cerrar:hover {
+    background-color: #555;
+}
     </style>
       <meta content="Aprende a preparar la auténtica tortilla de patatas española paso a paso, con ingredientes sencillos y consejos para lograr el punto perfecto." name="description"/>
       <meta content="tortilla de patatas, receta española, cocina tradicional, huevos, patatas, cebolla, comida casera" name="keywords"/>
@@ -101,6 +143,26 @@
 
     <a href="Receta_ Tortilla de patatas.pdf" download>Descargar receta en PDF</a>
 
+    <footer>
+    <a href="#formulario-resena" class="boton-resena">Escribe una reseña</a>
+
+    <div id="formulario-resena" class="modal">
+        <h2>Escribe tu reseña</h2>
+
+        <form>
+            <label>Nombre:</label><br>
+            <input type="text" required><br><br>
+
+            <label>Tu reseña:</label><br>
+            <textarea rows="5" required></textarea><br><br>
+
+            <button type="submit">Enviar</button><br><br>
+
+            <a href="#" class="cerrar">Cerrar</a>
+        </form>
+    </div>
+</footer>
 </body>
 </html>
+
 
