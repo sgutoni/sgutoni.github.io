@@ -1,0 +1,89 @@
+:root {
+    --color-fondo: #fff8f0;
+    --color-principal: #8b0000;
+    --color-secundario: #0066cc;
+    --color-texto: #333;
+    --fuente-base: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-base);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    padding: 30px;
+}
+
+img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: var(--color-principal);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004a99;
+}
+
+.boton-formulario {
+    display: inline-block;
+    margin: 10px 25px;
+    padding: 12px 22px;
+    background-color: var(--color-principal);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-formulario:hover {
+    background-color: #a30000;
+}
+
+footer {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    background-color: #f0e0c8;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #5b3c2d;
+}
