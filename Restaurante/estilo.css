@@ -68,8 +68,7 @@
             padding: 10px;
             font-size: 0.9em;
             color: #5b3c2d;
-        }
-footer form {
+        footer form {
     margin: 10px 0;
 }
 
@@ -97,3 +96,4 @@ footer button:hover {
     background-color: #a40000;
     transform: scale(1.05);
 }
+        }
